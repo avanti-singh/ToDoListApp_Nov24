@@ -1,0 +1,224 @@
+/* Import the Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+    background: url('./BG1.jpg') no-repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 20px;
+    color: #333; /* Dark grey for text */
+}
+
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px; /* Adds space below the translucent box */
+    background: rgba(255, 255, 255, 0.8); /* Softer translucent effect */
+    padding: 20px;
+    border-radius: 20px; /* More rounded */
+    max-width: 800px;
+    margin: 0 auto 20px auto; /* Adds space between the header and bentos */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Subtle shadow for a lifted look */
+    position: relative;
+}
+
+#quote-box {
+    font-style: italic;
+    width: 100%;
+    max-width: 600px;
+    margin: 5px 0; /* Reduced margin to bring the quote closer to the main header */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 12px; /* More rounded */
+    resize: none;
+    font-size: 1em;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+#quote-box:focus {
+    border-color: #007aff; /* Blue border when focused, like Apple design */
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.3); /* Blue glow on focus */
+}
+
+#add-bento-btn {
+    margin: 10px 0;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px; /* Rounded button */
+    background-color: #007aff; /* Apple-like blue */
+    color: white;
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+#add-bento-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.header-buttons {
+    display: flex;
+    gap: 10px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+}
+
+.bento-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.bento-column {
+    background: #f8f9fa; /* Solid background color */
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px; /* More rounded for a softer look */
+    display: flex;
+    flex-direction: column;
+    transition: background 0.3s, transform 0.2s ease;
+    width: 400px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Subtle shadow for a floating effect */
+}
+
+.bento-column:hover {
+    background: #e9ecef;
+    transform: translateY(-4px); /* Slight lift on hover */
+}
+
+.column-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.bento-title {
+    margin: 0;
+    font-size: 1.2em;
+    font-weight: 600; /* Slightly bolder for emphasis */
+    color: #333; /* Darker text for better contrast */
+}
+
+.add-task-btn {
+    padding: 5px 10px;
+    font-size: 1em;
+    cursor: pointer;
+    background: #34c759; /* Apple-like green for add button */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded for consistency */
+    transition: background 0.3s;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.add-task-btn:hover {
+    background: #28a745; /* Slightly darker green on hover */
+}
+
+.delete-bento-btn {
+    background: transparent;
+    border: none;
+    color: #ff3b30; /* Apple-like red for delete */
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.delete-bento-btn:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.task-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.task-input {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #000; /* Black border for contrast */
+    border-radius: 8px; /* More rounded for inputs */
+    font-size: 1em;
+    font-family: 'Inter', sans-serif; /* Ensure Inter font for task input */
+    margin-right: 10px; /* Space between the input and the delete button */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    transition: border-color 0.3s, box-shadow 0.3s;
+    width: calc(100% - 50px); /* Make the input fill more of the available space */
+}
+
+
+.task-input:focus {
+    border-color: #007aff;
+    box-shadow: 0 0 8px rgba(0, 122, 255, 0.3); /* Focus glow */
+}
+
+.delete-task-btn {
+    background: transparent;
+    border: none;
+    color: #ff3b30;
+    font-size: 1.2em;
+    cursor: pointer;
+    padding: 5px;
+    transition: transform 0.1s ease-in-out;
+}
+
+.delete-task-btn:hover {
+    transform: scale(1.1);
+}
+
+.bento-column.dragging {
+    opacity: 0.5;
+    border: 2px dashed #aaa;
+}
+
+button {
+    cursor: pointer;
+}
+
+#add-bento-btn, #undo-btn, #change-bg-btn {
+    margin: 5px;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    border-radius: 10px;
+    background-color: #007aff; /* Consistent blue */
+    color: white;
+    transition: background-color 0.3s, transform 0.1s ease-in-out;
+}
+
+#add-bento-btn:hover, #undo-btn:hover, #change-bg-btn:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift on hover */
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px; /* Space between checkbox and task input */
+}
+
+.task-checkbox {
+    margin-right: 10px; /* Space between the checkbox and the task input */
+    transform: scale(1.2); /* Make the checkbox a bit larger for easier use */
+}

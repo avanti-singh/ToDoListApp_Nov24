@@ -1,0 +1,15 @@
+{
+  "name": "todolistapp",
+  "version": "1.0.0",
+  "main": "main.js",
+  "scripts": {
+    "start": "electron ."  
+  },
+  "keywords": [],
+  "author": "Avanti Singh",
+  "license": "MIT",
+  "description": "",
+  "devDependencies": {
+    "electron": "^32.1.0"
+  }
+}

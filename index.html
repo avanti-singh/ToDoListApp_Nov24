@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avanti's To Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <!-- Translucent Header Box -->
+    <header class="main-header">
+        <h1 contenteditable="true">Avanti's To Do List</h1>
+        <textarea id="quote-box" placeholder="Write your quote of the day..."></textarea>
+        <button id="add-bento-btn">Add Bento</button>
+        <div class="header-buttons">
+            <button id="undo-btn">Undo</button>
+            <button id="change-bg-btn">🖼️</button>
+            <input type="file" id="bg-input" accept="image/*" style="display: none;">
+        </div>
+    </header>
+
+    <div class="bento-container" id="bento-container">
+        <!-- Default Bento Box: Today -->
+        <div class="bento-column">
+            <div class="column-header">
+                <div class="title-container">
+                    <h2 contenteditable="true" class="bento-title">Today</h2>
+                    <button class="add-task-btn">+</button>
+                </div>
+                <button class="delete-bento-btn">X</button>
+            </div>
+            <ul class="task-list"></ul>
+        </div>
+    
+        <!-- Default Bento Box: Goals -->
+        <div class="bento-column">
+            <div class="column-header">
+                <div class="title-container">
+                    <h2 contenteditable="true" class="bento-title">Goals</h2>
+                    <button class="add-task-btn">+</button>
+                </div>
+                <button class="delete-bento-btn">X</button>
+            </div>
+            <ul class="task-list"></ul>
+        </div>
+    
+        <!-- Default Bento Box: Misc -->
+        <div class="bento-column">
+            <div class="column-header">
+                <div class="title-container">
+                    <h2 contenteditable="true" class="bento-title">Misc</h2>
+                    <button class="add-task-btn">+</button>
+                </div>
+                <button class="delete-bento-btn">X</button>
+            </div>
+            <ul class="task-list"></ul>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
